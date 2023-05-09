@@ -1,0 +1,41 @@
+
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Establecimientos Buscados</title>
+  <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/Cliente/resultadoBuscar.css}'>
+  <link rel="icon" type="image/x-icon" href="/imagenes/logo.png" />
+  <link rel='stylesheet' type='text/css' media='screen' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='https://fonts.googleapis.com/css?family=Montserrat'>
+  <script src='main.js'></script>
+</head>
+<body>
+  <div class="rectangulo">
+    <img th:src="@{/imagenes/logo.png}" class="logo">
+    <p class="titulo">mASCOTMERCIO</p>
+    <p class="textoperfil">MI PERFIL</p>
+    <img th:src="@{/imagenes/perfil.png}" class="perfil">
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-6" th:each="establecimiento : ${establecimientos}">
+        <div class="blog-card align-items-center">
+          <div class="details">
+            <h1>Nombre: <label th:text="${establecimiento.nombre}"></label></h1>
+            <h2>Dirección del establecimiento: <label th:text="${establecimiento.direccion}"></label></h2>
+            <h2>Tipo de establecimiento: <label th:text="${establecimiento.servicios}"></label></h2>
+            <a th:href="@{/propietario/establecimientos/{id}(id=${establecimiento.id})}">
+              <button class="boton-detalle">Ver Más Detalles</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Mascotmercio</title>
+    <link rel="icon" type="image/x-icon" href="/imagenes/logo.png" />
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/inicio.css}'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="rectangulo">
+        <img th:src="@{/imagenes/logo.png}" class="logo">
+        <p class="titulo">MASCOTMERCIO</p>
+        <p class="eslogan">¡Disfruta de tus planes de ocio con tu mascota!</p>
+        
+    </div>
+    <a class="paginaInicio">
+        <div class="textoInicio">
+            <p>La mejor selección de establecimientos pet-friendly esta en  Mascotmercio, te ofrecemos una amplia variedad de opciones de ocio en Madrid para compartir con tus mascotas, desde bares y restaurantes hasta tiendas y centros de ocio.
+                En Mascotmercio creemos que los animales de compañía son un miembro más de la familia, y por eso trabajamos día a día para ofrecerte las mejores opciones de ocio junto a ellos. </p>
+            <br>
+            <p><b>¡Únete a nuestra comunidad y descubre todo lo que tenemos para ofrecerte!</b></p>
+        </div>
+    </a>
+
+    <div class="botonesIndex">
+        <div class="botonesInicioSesion">
+            <a th:href="@{/cliente}"><button>Iniciar Sesion Cliente</button></a>
+            <a th:href="@{/propietario}"><button>Iniciar Sesion Propietario</button></a>        
+        </div>
+    </div>
+      <div class="botonRegistrarse">
+        <a href="/registro"><button>Registrarse</button></a>
+    </div>
+
+
+</body>
+
+</html>

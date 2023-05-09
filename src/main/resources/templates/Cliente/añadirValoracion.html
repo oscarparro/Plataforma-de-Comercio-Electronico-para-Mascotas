@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Añadir Valoración</title>
+  <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/Cliente/añadirValoracion.css}'>
+</head>
+<body>
+  <div class="rectangulo" sec:authorize="isAuthenticated()">
+      <img th:src="@{/imagenes/logo.png}" class="logo">
+      <p class="titulo">MASCOTMERCIO</p>
+      <p class="textoperfil">MI PERFIL</p>
+      <img th:src="@{/imagenes/perfil.png}" class="perfil">
+  </div>
+  <div class="textoRegistro">Añade tu valoración</div>
+  <div class="paginaRegistro">
+    <form th:object="${valoracion}" method="POST" th:action="@{/cliente/establecimientos/{id}/anadirValoracion(id=${establecimiento.id})}">
+      <div class="nombreCliente">
+        <img th:src="@{/imagenes/iconopersona.png}" class="icono">
+        <input type="text" th:field="*{nombreCliente}" name="nombreCliente" id="nombreCliente" placeholder="Nombre completo" class="input">
+        <span th:if="${#fields.hasErrors('nombreCliente')}" th:errors="*{nombreCliente}"></span>
+      </div>
+        <div class="rating">
+          <input type="radio" id="star5" name="rate" value="5" th:field="*{calificacion}">
+          <label for="star5" title="text"></label>
+          <input type="radio" id="star4" name="rate" value="4" th:field="*{calificacion}">
+          <label for="star4" title="text"></label>
+          <input checked="" type="radio" id="star3" name="rate" value="3" th:field="*{calificacion}">
+          <label for="star3" title="text"></label>
+          <input type="radio" id="star2" name="rate" value="2" th:field="*{calificacion}">
+          <label for="star2" title="text"></label>
+          <input type="radio" id="star1" name="rate" value="1" th:field="*{calificacion}">
+          <label for="star1" title="text"></label>
+        </div>
+      <div>
+        <textarea class ="comentario" id="comentario" name="comentario" th:field="*{comentario}" rows="5" placeholder="Introduce un comentario"></textarea>
+      </div>
+      <input type="hidden" name="establecimientoId" th:value="${establecimiento.id}" />
+      <button type="submit">Añadir Valoración</button>
+    </form>
+  </div>
+</body>
+</html>

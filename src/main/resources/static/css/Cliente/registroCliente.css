@@ -1,0 +1,200 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    background-color: #cbe8ba;
+}
+
+
+.rectangulo {
+    padding: 0;
+    background-color: #92d36e;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-start;
+    border-width: 2px;
+    border-style: ridge;
+    border-color: black;
+}
+
+.logo {
+	width: 167px;
+	height: 142px;
+
+    align-self: left;
+}
+
+.titulo {
+    width: 656px;
+    height: 127px;
+    color: #000000;
+    background-color: #92d36e;
+    font-family: "Comic Neue";
+    font-weight: bold;
+    font-size: 63px;
+    margin-top: 35px;
+    margin-left:20px;
+}
+
+.eslogan {
+    width: 796px;
+    height: 27px;
+    color: white;
+    background-color: #92d36e;
+    font-family: "Comic Neue";
+    font-weight: bold;
+    font-size: 33px;
+    margin-top: 120px;
+}
+
+.textoRegistro {
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.paginaRegistro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 420px;
+    height: 60px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+    margin-bottom: 20px;
+}
+
+#name, #username, #password{
+    padding-left: 10px;
+    text-indent: 60px;
+    font-size: 20px;
+}
+   
+.input::placeholder {
+    color: #9e9ea7;
+    font-size: 20px;
+}
+   
+.input:focus, input:hover {
+    outline: none;
+    border-color: rgba(40, 225, 3, 0.4);
+    background-color: #f3f3f4;
+    box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icono{
+    position: absolute;
+    border-radius: 8px;
+    fill: #9e9ea7;
+    background-color: #f3f3f4;
+    width: 37px;
+    height: 37px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+/* Customize the label (the checkbox-btn) */
+.checkbox-btn {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox-btn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkbox-btn label {
+    cursor: pointer;
+    font-size: 14px;
+  }
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border-radius: 5px;
+    border: 3px solid #1663a7;
+  }
+  .checkbox-btn input:checked ~ .checkmark {
+    background-color: transparent;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 3.5px;
+    top: 0.5px;
+    width: 3.5px;
+    height: 6px;
+    border: 2.5px solid #000000;
+    border-width: 0 2.5px 2.5px 0;
+    transition: .3s ease-in-out;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-btn input:checked ~ .checkmark:after {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .botonesIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+button {
+    margin-top: 20px;
+    height: 50px;
+    width: 125px;
+	background: #355723;
+	color: #ffffff;
+	border-color: #232323;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px 3px 3px 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 17px;
+	text-align: center;
+    
+}

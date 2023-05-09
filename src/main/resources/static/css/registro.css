@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    background-color: #cbe8ba;
+}
+
+.rectangulo {
+    padding: 0;
+    background-color: #92d36e;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-start;
+    border-width: 2px;
+    border-style: ridge;
+    border-color: black;
+}
+
+.logo {
+	width: 167px;
+	height: 142px;
+
+    align-self: left;
+}
+
+.titulo {
+    width: 656px;
+    height: 127px;
+    color: #000000;
+    background-color: #92d36e;
+    font-family: "Comic Neue";
+    font-weight: bold;
+    font-size: 63px;
+    margin-top: 35px;
+    margin-left:20px;
+}
+
+.paginaInicio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.textoInicio {
+	width: 85%;
+	height: 270px;
+	color: #000000;
+	font-family: "Comic Neue";
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 1.3;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+.eslogan {
+    width: 796px;
+    height: 27px;
+    color: white;
+    background-color: #92d36e;
+    font-family: "Comic Neue";
+    font-weight: bold;
+    font-size: 33px;
+    margin-top: 120px;
+}
+
+button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+    margin-right: 10px;
+   }
+   
+   button:hover {
+    letter-spacing: 3px;
+    background-color: #92d36e;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgba(146, 211, 110, 0.8) 0px 7px 29px 0px;
+  }
+  
+  button:active {
+    letter-spacing: 3px;
+    background-color: #92d36e;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgba(146, 211, 110, 0.8) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+  }
+
+  .botonesIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-left: 20px;
+  }

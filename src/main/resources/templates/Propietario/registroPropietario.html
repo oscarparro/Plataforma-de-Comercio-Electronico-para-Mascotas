@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Registro propietario</title>
+    <link rel="icon" type="image/x-icon" href="/imagenes/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/Cliente/registroCliente.css}'>
+</head>
+
+
+<body>
+    <div class="rectangulo">
+        <img th:src="@{/imagenes/logo.png}" class="logo">
+        <p class="titulo">MASCOTMERCIO</p>
+        <p class="eslogan">¡Disfruta de tus planes de ocio con tu mascota!</p>     
+    </div>
+    <div class="textoRegistro">Registro Para Propietarios</div>
+    <div class="paginaRegistro">
+        <form action="#" th:action="@{/anadirPropietario}" th:object="${propietario}" method="post">
+            <div class="formulario">
+                <div class="name">
+                    <img th:src="@{/imagenes/iconopersona.png}" class="icono">
+                    <input type="text" th:field="*{name}" id="name" placeholder="Nombre completo" class="input">
+                    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                </div>
+                <div class="email">
+                    <img th:src="@{/imagenes/iconocorreo.png}" class="icono">
+                    <input type="text" th:field="*{username}" id="username" placeholder="Email" class="input">
+                    <span th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
+                </div>
+                <div class="contraseña">
+                    <img th:src="@{/imagenes/iconocontraseña.png}" class="icono">
+                    <input type="text" th:field="*{password}" id="password" placeholder="Contraseña" class="input">
+                    <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                </div>
+            </div>
+            <label class="checkbox-btn">
+              <label for="checkbox"></label>
+              <input id="checkbox" type="checkbox" onclick="validarCheckbox()">
+              <span class="checkmark"></span>
+              <p>Acepto los terminos y condiciones de uso</p>
+            </label>
+            <div id="error-message" style="display:none; font-weight: bold;">¡Por favor, acepta los términos y condiciones!</div>
+            
+            <script>
+              function validarCheckbox() {
+                var checkBox = document.getElementById("checkbox");
+                var errorMessage = document.getElementById("error-message");
+                var guardarButton = document.querySelector('.guardar');
+                
+                if (checkBox.checked == true){
+                  // Checkbox está marcado, se puede continuar
+                  errorMessage.style.display = "none"; // Ocultar mensaje de error si estaba siendo mostrado
+                  guardarButton.disabled = false; // Habilitar el botón "Guardar"
+                } else {
+                  // Checkbox no está marcado, mostrar mensaje de error
+                  errorMessage.style.display = "block";
+                  guardarButton.disabled = true; // Deshabilitar el botón "Guardar"
+                }
+              }
+            </script>
+            <div class="botonesIndex">
+              <button class="guardar" type="submit" disabled>GUARDAR</button>
+            </div>
+            
+        </form>
+      </div>
+</body>
+</html>

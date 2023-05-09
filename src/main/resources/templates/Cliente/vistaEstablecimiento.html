@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Detalles del Establecimiento</title>
+    <link rel="icon" type="image/x-icon" href="/imagenes/logo.png" />
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/Cliente/vistaEstablecimiento.css}'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    
+    <div class="rectangulo">
+        <img th:src="@{/imagenes/logo.png}" class="logo">
+        <p class="titulo">MASCOTMERCIO</p>
+        <p class="textoperfil">MI PERFIL</p>
+        <img th:src="@{/imagenes/perfil.png}" class="perfil">
+    </div>
+
+    <div class="establecimiento-container">
+        <div class="establecimiento-info">
+          <div class="imagen">
+            <img class="imagen" th:src="@{'/imagenes/' + ${establecimiento.imagen}}" th:alt="${establecimiento.imagen}" onerror="this.src='/imagenes/imagenEstablecimientoPredet.jpeg'"> 
+          </div>
+            <br><br><h2 th:text="${establecimiento.nombre}"></h2>
+            <p><br>Dirección: <h3 th:text="${establecimiento.direccion}"></h3></p>
+            <p><br>Tipo de Servicio:<h3 th:text="${establecimiento.servicios}"></h3></p>
+            <p><br>Descripción del Servicio:<h3 th:text="${establecimiento.descripcion}"></h3></p>
+            <p><br>Horario:<h3><span th:text="${establecimiento.horario}"></span></h3></p>
+            <div class="button_top">
+              <a th:href="@{/atrasCliente}">
+                <button class="button_back">ATRAS</button>
+              </a>
+            </div>
+        </div>
+        <div class="establecimiento-valoraciones">
+          <h2>Valoraciones</h2>
+          <div class="container">
+            <div class="item" th:each="valoracion : ${valoraciones}">
+              <h3 class="nombre">Cliente: <span th:text="${valoracion.nombreCliente}"></span></h3><br>
+              
+              <h4 class="calificacion">Calificación: <span th:text="${valoracion.calificacion}"></span>★</h4><br>
+
+              <h4 class="comentario">Comentario: <span th:text="${valoracion.comentario}"></span></h4><br>
+            </div>
+          </div>
+          <div class="add-valoracion-container">
+            <a th:href="@{/cliente/establecimientos/{id}/nuevaValoracion(id=${establecimiento.id})}"><button class="add-valoracion-btn">+</button></a>
+            <p class="add-valoracion-text">Añadir Valoración</p>
+          </div>   
+        </div>
+      </div>    
+</body>
+
+</html>
+

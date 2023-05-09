@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Registro</title>
+    <link rel="icon" type="image/x-icon" href="/imagenes/logo.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/registro.css}'>
+</head>
+
+
+<body>
+  <div class="rectangulo">
+    <img th:src="@{/imagenes/logo.png}" class="logo">
+    <p class="titulo">MASCOTMERCIO</p>
+    <p class="eslogan">¡Disfruta de tus planes de ocio con tu mascota!</p>
+  </div>
+  <a class="paginaInicio">
+    <div class="textoInicio">
+        <p>Bienvenido a nuestra web Mascotmercio! Estamos muy contentos de que hayas decidido unirte a nuestra comunidad! En Mascotmercio podras encontrar un sinfin de planes divertidos para disfrutar de tu mascota. 
+          Para registrarte tan solo tendras que elegir el tipo de usuario y completar el formulario, listo! Una vez registrado podrás empezar a explorar todos los establecimientoss que tenemos para ofrecerte.
+        </p>
+    </div>
+  </a>
+  <div class="botonesIndex">
+    <a href="/nuevoCliente"><button type="submit">REGISTRO CLIENTES</button></a>
+    <a href="/nuevoPropietario"><button type="submit">REGISTRO PROPIETARIOS</button></a>
+  </div>
+</body>

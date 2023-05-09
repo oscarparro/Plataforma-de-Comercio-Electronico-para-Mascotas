@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Añadir Establecimiento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/Propietario/añadirEstablecimiento.css}'>
+</head>
+
+
+<body>
+    <div class="rectangulo">
+        <img th:src="@{/imagenes/logo.png}" class="logo">
+        <p class="titulo">MASCOTMERCIO</p>
+        <p class="textoperfil">MI PERFIL</p>
+        <img th:src="@{/imagenes/perfil.png}" class="perfil">
+    </div>
+    <div class="textoRegistro">Añade tu establecimiento</div>
+    <div class="paginaRegistro">
+        <form action="#" th:action="@{/propietario/anadirEstablecimiento}" th:object="${establecimiento}" method="post" enctype="multipart/form-data">
+            <div class="formulario">
+                    <div class="izquierda">
+                        <div class="nombre">
+                            <img th:src="@{/imagenes/casa.png}" class="icono">
+                            <input type="text" th:field="*{nombre}" id="nombre" placeholder="Nombre" class="inputNombre">
+                            <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+                        </div>
+                        <div class="direccion">
+                            <img th:src="@{/imagenes/iconomapa.png}" class="icono">
+                            <input type="text" th:field="*{direccion}" id="direccion" placeholder="Dirección" class="inputDireccion">
+                            <span th:if="${#fields.hasErrors('direccion')}" th:errors="*{direccion}"></span>
+                        </div>
+                        <div class="servicios">
+                            <select th:field="*{servicios}" id="servicios" class="inputServicio">
+                                <option value="" selected>Selecciona una opción</option>
+                                <option value="Tienda de animales">Tienda de animales</option>
+                                <option value="Restaurante">Restaurante</option>
+                                <option value="Peluqueria">Peluquería</option>
+                                <option value="SPA">SPA</option>
+                                <option value="Cafeteria">Cafetería</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                            <span th:if="${#fields.hasErrors('servicios')}" th:errors="*{servicios}"></span>
+                        </div>
+                        <div class="horario">
+                            <textarea name="horario" th:field="*{horario}" class="inputHorario" placeholder="Introduce los horarios de disponibilidad"></textarea>
+                            <span th:if="${#fields.hasErrors('horario')}" th:errors="*{horario}"></span>
+                        </div>
+                    </div>
+                    <div class="derecha">
+                        <div class="descripcion">
+                            <textarea name="descripcion" th:field="*{descripcion}" class="inputDescripción" placeholder="Introduce una breve descripción sobre tu establecimiento (opcional)"></textarea>
+                            <span th:if="${#fields.hasErrors('descripcion')}" th:errors="*{descripcion}"></span>
+                        </div>
+                        <div class="container">
+                            <form>
+                                <input class="inpdddut" name="file" id="imagen" type="file">
+                                <span th:if="${#fields.hasErrors('imagen')}" th:errors="*{imagen}"></span>
+                            </form>
+                        </div>
+                        <label class="checkbox-btn">
+                            <label for="checkbox"></label>
+                            <input id="checkbox" type="checkbox" onclick="validarCheckbox()">
+                            <span class="checkmark"></span>
+                            <p>Acepto que los clientes puedan ver la información</p>
+                          </label>
+                          <div id="error-message" style="display:none; font-weight: bold;">¡Por favor, acepta los términos y condiciones!</div>
+                          
+                          <script>
+                            function validarCheckbox() {
+                              var checkBox = document.getElementById("checkbox");
+                              var errorMessage = document.getElementById("error-message");
+                              var guardarButton = document.querySelector('.guardar');
+                              
+                              if (checkBox.checked == true){
+                                // Checkbox está marcado, se puede continuar
+                                errorMessage.style.display = "none"; // Ocultar mensaje de error si estaba siendo mostrado
+                                guardarButton.disabled = false; // Habilitar el botón "Guardar"
+                              } else {
+                                // Checkbox no está marcado, mostrar mensaje de error
+                                errorMessage.style.display = "block";
+                                guardarButton.disabled = true; // Deshabilitar el botón "Guardar"
+                              }
+                            }
+                          </script>
+                          <div class="botonesIndex">
+                            <button class="guardar" type="submit" disabled>GUARDAR</button>
+                          </div> 
+                    </div>
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+</body>
+</html>

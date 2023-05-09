@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Recuperar contraseña</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/Cliente/registroCliente.css}'>
+</head>
+
+
+<body>
+    <div class="rectangulo">
+        <img th:src="@{/imagenes/logo.png}" class="logo">
+        <p class="titulo">MASCOTMERCIO</p>
+        <p class="eslogan">¡Disfruta de tus planes de ocio con tu mascota!</p>     
+    </div>
+
+
+    <div class="textoRegistro">¿Ha olvidado su contraseña?</div>
+    <div class="paginaRegistro">
+
+        <form action="#" th:action="@{/recuperar-contrasena}" th:object="${cliente}" method="post">
+            <div class="formulario">
+                <div class="email">
+                    <img th:src="@{/imagenes/iconocorreo.png}" class="icono">
+                    <input type="text" th:field="*{email}" id="email" placeholder="Email" class="input">
+                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                </div>
+            </div>
+            <div class="botonesIndex">
+                <button class="guardar" type="submit">ENVIAR</button></a>
+            </div>
+        </form>
+      </div>
+</body>
+</html>

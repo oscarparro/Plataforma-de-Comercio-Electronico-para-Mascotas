@@ -1,0 +1,392 @@
+
+*{
+  margin:0;
+  box-sizing: border-box;
+  background-color: #cbe8ba;
+}
+
+html, body {
+  overflow-y: auto;
+}
+
+.rectangulo {
+  padding: 0;
+  background-color: #92d36e;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: flex-start;
+  border-width: 2px;
+  border-style: ridge;
+  border-color: black;
+}
+
+.logo {
+width: 117px;
+height: 117px;
+  align-self: left;
+  margin-left: 10px;
+}
+
+.titulo {
+  width: 956px;
+  height: 85px;
+  color: #000000;
+  background-color: #92d36e;
+  font-family: "Comic Neue";
+  font-weight: bold;
+  font-size: 55px;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.textoperfil{
+  width: 130px;
+  height: 45px;
+  color: #000000;
+  background-color: #92d36e;
+  font-family: "Comic Neue";
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 50px;
+  margin-left: 140px;
+}
+
+.perfil{
+  width: 97px;
+height: 97px;
+  background-color: #92d36e;
+  margin-top: 12px;
+  margin-right: 10px;
+}
+
+
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 170px;
+ }
+ 
+ .input {
+  width: 300px;
+  height: 45px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: .3s ease;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .input::placeholder {
+  color: #9e9ea7;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .input:focus, input:hover {
+  outline: none;
+  border-color: rgba(40, 225, 3, 0.4);
+  background-color: #f3f3f4;
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+ }
+ 
+ .icon {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  background-color: #f3f3f4;
+  width: 1rem;
+  height: 1rem;
+ }
+
+.select {
+  position: relative;
+  display: inline-block;
+  margin-left: 40px;
+  background-color: #f3f3f4;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.select select {
+  display: block;
+  width: 300px;
+  height: 45PX;
+  padding: 12px 16px;
+  font-size: 15px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* RESULTADO BUSQUEDA */
+
+.blog-card {
+  display: inline-block;
+  width: 300px;
+  height: 380px;
+  margin: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card .meta {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.blog-card .meta .photo {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.blog-card .detalles {
+  padding: 20px;
+}
+
+.blog-card .detalles h1 {
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+
+.blog-card .detalles h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.blog-card .detalles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-card .detalles button {
+  display: block;
+  background-color: #6c757d;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.blog-card .detalles button:hover {
+  background-color: #5a6268;
+}
+
+
+.tarjetas-container {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.ver-mas-detalle {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Estilos para el botón */
+button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  color: #222222;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos cuando el cursor se coloca sobre el botón */
+button:hover {
+  background-color: #222222;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+
+
+.blog-card .photo {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.blog-card .details {
+  background-color: #92d36e;
+  padding: 15px;
+}
+
+.blog-card h1 {
+  margin: 0;
+  background-color: #92d36e;
+  font-size: 30px; /* Cambiar el tamaño de la fuente del título */
+  font-weight: 600;
+}
+
+.blog-card label {
+  background-color: #92d36e;
+}
+
+.blog-card h2 {
+  margin: 5px 0;
+  background-color: #92d36e;
+  font-size: 24px; /* Cambiar el tamaño de la fuente del subtitulo */
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.blog-card .button {
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px; /* Cambiar el tamaño de la fuente del botón */
+}
+
+.blog-card .button:hover {
+  background-color: #16a085;
+}
+
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 40%;
+  height: 40%;
+  border: 2px solid #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  margin-top: 40px;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card .meta {
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+}
+
+.blog-card .meta .photo {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.blog-card .detalles {
+  padding: 20px;
+}
+
+.blog-card .detalles h1 {
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+
+.blog-card .detalles h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.blog-card .detalles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-card .detalles button {
+  display: block;
+  background-color: #6c757d;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.blog-card .detalles button:hover {
+  background-color: #5a6268;
+}
+
+
+.tarjetas-container {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.ver-mas-detalle {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
