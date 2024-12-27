@@ -33,12 +33,15 @@ MascotMercio es una plataforma de comercio electrónico diseñada para facilitar
    git clone https://github.com/oscarparro/ISST-Mascotmercio-Grupo17.git
 
 2. **Navegar al directorio del proyecto:**
+   ```bash
    cd ISST-Mascotmercio-Grupo17
 
 3. **Compilar el proyecto con Maven:**
+   ```bash
    mvn clean install
 
 4. **Ejecutar la aplicación:**
+   ```bash
    mvn spring-boot:run
 
 5. **Acceder a la aplicación:**
